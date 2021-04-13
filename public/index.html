@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Web socket</title>
+    <style>
+       
+        #Gen {
+            float: left;
+            width: 50%;
+                background-color:cornsilk;
+        }
+        #Rooms {
+            float: right;
+            width: 50%;
+            background-color:rgb(207, 170, 170);
+        }
+
+    </style>
+</head>
+<body>
+    <div id="Gen">
+    <form action="" id="general">
+        Choodse your default nickname:<input type="text" id="name"><br><br><br>
+        message:<input type="text" id="m"><br>
+        
+    <input type="submit"></form>
+    General chat:
+    <ul id="messages"></ul>
+    </div>
+    <br>
+    <div id="Rooms">
+    <p>Enter Room</p>
+    <button id="room1">Room1</button>
+    <button id="room2">Room2</button>
+    <button id="room3">Room3</button>
+    <button id="end">leave</button>
+    <br>
+    <div id="formii">
+    <form action="" id="group">
+        message:<input type="text" id="message_in_room"><br>
+        <br>
+    <input type="submit"></form>
+    group chat:
+    <ul id="messages_in_room"></ul>
+</div>
+</div>
+
+    <script src="/socket.io/socket.io.js"></script>
+<script src="chat.js"></script>
+
+</body>
+</html>
